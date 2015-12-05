@@ -3,12 +3,6 @@
   .row
     .col-md-8.col-md-offset-2
       .text-center
-        = @html
-        - if ENV["EMAIL"]
-          %p
-            = link_to "mailto:#{ENV["EMAIL"].downcase}", target: :_blank do
-              = fa_icon :send
-              = ENV["EMAIL"]
         - if ENV["FACEBOOK"]
           %p
             = link_to "https://www.facebook.com/#{ENV["FACEBOOK"]}", target: :_blank do

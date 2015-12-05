@@ -7,9 +7,8 @@ Rails.application.routes.draw do
     root "users#index"
 
     resources :users, only: [:index, :edit, :create, :update, :destroy]
-    resources :paintings, only: [:index, :edit, :create, :update, :destroy]
-    resources :pages, only: [:index, :edit, :create, :update, :destroy]
+    resources :assessments, only: [:index]
   end
 
-  get ":path", to: "pages#show", as: :page
+  get :contact, to: "pages#contact"
 end

@@ -1,0 +1,23 @@
+.container-fluid
+  .row
+    .col-xs-12
+      .panel.panel-default
+        .panel-heading
+          %h4 Assessments
+        %table.table.table-bordered.table-hover
+          %thead
+            %tr
+              %th UID
+              %th Personality
+              %th User
+              %th Created At
+              %th
+          %tbody
+            - @assessments.each do |assessment|
+              %tr
+                %td= assessment.uid
+                %td= assessment.blend_name || "Incomplete"
+                %td= assessment.user ? assessment.user.name : "None"
+                %td= assessment.created_at.strftime("%m/%d/%y %I:%M %p")
+                %td
+                  = link_to "View", assessment_path(assessment)

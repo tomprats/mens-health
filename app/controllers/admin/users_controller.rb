@@ -1,14 +1,12 @@
 class Admin::UsersController < AdminController
   def index
-    @user = User.new
-    @users = User.all
+    render_index
   end
 
   def edit
     @user = User.find(params[:id])
-    @users = User.all
 
-    render :index
+    render_index
   end
 
   def create
@@ -16,8 +14,7 @@ class Admin::UsersController < AdminController
     if @user.save
       redirect_to({ action: :index }, success: "#{@user.name} created")
     else
-      @users = User.all
-      render :index, warning: @user.errors.full_messages.join(", ")
+      render_index warning: @user.errors.full_messages.join(", ")
     end
   end
 
@@ -26,8 +23,7 @@ class Admin::UsersController < AdminController
     if @user.update(user_params)
       redirect_to({ action: :index }, success: "#{@user.name} updated")
     else
-      @users = User.all
-      render :index, warning: @user.errors.full_messages.join(", ")
+      render_index warning: @user.errors.full_messages.join(", ")
     end
   end
 
@@ -48,5 +44,13 @@ class Admin::UsersController < AdminController
       :first_name, :last_name,
       :password, :password_confirmation
     )
+  end
+
+  def render_index(options = {})
+    @user ||= User.new
+    @users = User.all
+    @admins = User.admin
+
+    render :index, options
   end
 end

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email, :first_name, :last_name
   validates_uniqueness_of :email
-  validates :email, format: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  validates :email, format: /@/i
 
   before_validation :format_email
 

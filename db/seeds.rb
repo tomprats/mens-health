@@ -6,9 +6,10 @@ User.create(
   password: "password"
 )
 
-Page.create(
-  active: true,
-  rank: 50,
-  path: "contact",
-  name: "Contact"
+User.create(
+  admin: true,
+  email: "ew@tomprats.com",
+  first_name: "Erin",
+  last_name: "Weaver",
+  password: "password"
 )
