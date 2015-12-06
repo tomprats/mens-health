@@ -3,6 +3,6 @@ Traitify.configure do |traitify|
   traitify.secret_key = ENV["TRAITIFY_SECRET"]
   traitify.host = ENV["TRAITIFY_HOST"]
   traitify.version = "v1"
-  traitify.deck_id = "fitness"
+  traitify.deck_id = ENV["DEFAULT_ASSESSMENT"]
   traitify.image_pack = :linear
 end

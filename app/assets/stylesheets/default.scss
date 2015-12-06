@@ -34,3 +34,12 @@ em {
     margin-top: $i*10px;
   }
 }
+
+.absolute-center {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  width: 100px;
+  margin-top: 9px;
+  margin-left: -50px;
+}

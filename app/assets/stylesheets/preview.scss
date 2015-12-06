@@ -1,0 +1,304 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Copse);
+
+body.pages-preview {
+  .panel-pane {
+    display: block;
+    font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    width: 690px;
+    word-wrap: break-word;
+    .channel_name {
+      border-bottom-color: rgb(255, 51, 0);
+      border-bottom-style: solid;
+      border-bottom-width: 9px;
+      color: rgb(57, 57, 57);
+      display: block;
+      font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 21px;
+      margin-bottom: 0px;
+      margin-left: 50px;
+      margin-top: 0px;
+      padding-bottom: 4px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+      text-transform: uppercase;
+      word-wrap: break-word;
+    }
+    .channel-image {
+      border-bottom-color: rgb(187, 187, 187);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      display: block;
+      font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+      font-size: 16px;
+      line-height: 21px;
+      margin-left: 50px;
+      overflow-x: visible;
+      overflow-y: visible;
+      padding-bottom: 35px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 35px;
+      word-wrap: break-word;
+      &::after {
+        clear: left;
+        display: table;
+        height: 0px;
+        width: 0px;
+      }
+      .img {
+        display: block;
+        float: left;
+        font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+        font-size: 16px;
+        line-height: 21px;
+        margin-right: 19.4844px;
+        position: relative;
+        word-wrap: break-word;
+        a {
+          color: rgb(0, 0, 238);
+          cursor: auto;
+          font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+          font-size: 16px;
+          line-height: 21px;
+          text-decoration: none;
+          word-wrap: break-word;
+          &:hover {
+            color: rgb(0, 0, 238);
+            cursor: auto;
+            font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+            font-size: 16px;
+            line-height: 21px;
+            outline-color: rgb(0, 0, 238);
+            outline-style: none;
+            outline-width: 0px;
+            text-decoration: none;
+            word-wrap: break-word;
+            img {
+              opacity: 0.85;
+            }
+          }
+        }
+        img {
+          border-bottom-color: rgb(0, 0, 238);
+          border-bottom-style: none;
+          border-bottom-width: 0px;
+          border-image-outset: 0px;
+          border-image-repeat: stretch;
+          border-image-slice: 100%;
+          border-image-source: none;
+          border-image-width: 1;
+          border-left-color: rgb(0, 0, 238);
+          border-left-style: none;
+          border-left-width: 0px;
+          border-right-color: rgb(0, 0, 238);
+          border-right-style: none;
+          border-right-width: 0px;
+          border-top-color: rgb(0, 0, 238);
+          border-top-style: none;
+          border-top-width: 0px;
+          color: rgb(0, 0, 238);
+          cursor: auto;
+          font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+          font-size: 16px;
+          height: 201.75px;
+          line-height: 21px;
+          max-width: 100%;
+          width: 318.297px;
+          word-wrap: break-word;
+        }
+        .primary-tag {
+          background-color: rgb(247, 242, 54);
+          color: rgb(0, 0, 0);
+          float: none;
+          font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+          font-size: 12px;
+          font-weight: normal;
+          height: 24px;
+          left: 0px;
+          line-height: 26px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          opacity: 0.85;
+          padding-left: 6px;
+          padding-right: 6px;
+          position: absolute;
+          text-transform: uppercase;
+          top: 0px;
+          word-wrap: break-word;
+          &:hover {
+            background-color: rgb(247, 242, 54);
+            opacity: 1;
+          }
+          a {
+            color: rgb(57, 57, 57);
+            cursor: auto;
+            font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 26px;
+            text-decoration: none;
+            text-transform: uppercase;
+            word-wrap: break-word;
+          }
+        }
+      }
+      .channel-content {
+        display: block;
+        float: left;
+        font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+        font-size: 16px;
+        line-height: 21px;
+        width: 298.812px;
+        word-wrap: break-word;
+        .article-title {
+          color: rgb(57, 57, 57);
+          display: block;
+          float: left;
+          font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 28.8px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          width: 298.812px;
+          word-wrap: break-word;
+          a {
+            color: rgb(57, 57, 57);
+            cursor: auto;
+            font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 28.8px;
+            margin-bottom: 6px;
+            text-decoration: none;
+            word-wrap: break-word;
+            &:hover {
+              color: rgb(255, 51, 0);
+            }
+          }
+        }
+        .byline-container {
+          display: block;
+          float: left;
+          font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 4.8px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 5px;
+          word-wrap: break-word;
+          .byline-wrapper {
+            font-family: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+            font-size: 16px;
+            line-height: 16px;
+            word-wrap: break-word;
+            .byline-role {
+              color: rgb(0, 178, 224);
+              font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+              font-size: 14px;
+              line-height: 16px;
+              padding-bottom: 0px;
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-top: 0px;
+              text-transform: uppercase;
+              word-wrap: break-word;
+            }
+            .field-author {
+              color: rgb(0, 178, 224);
+              font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+              font-size: 14px;
+              line-height: 16px;
+              padding-bottom: 0px;
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-top: 0px;
+              text-transform: uppercase;
+              word-wrap: break-word;
+              a {
+                color: rgb(0, 178, 224);
+                cursor: auto;
+                font-family: 'Acronym Extrabold', Arial, 'Nimbus Sans L', sans-serif;
+                font-size: 14px;
+                line-height: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                word-wrap: break-word;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+        .date {
+          color: rgb(161, 162, 162);
+          display: block;
+          float: left;
+          font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          line-height: normal;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 7.2px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          text-transform: uppercase;
+          width: 298.812px;
+          word-wrap: break-word;
+          span {
+            color: rgb(161, 162, 162);
+            font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            text-transform: uppercase;
+            word-wrap: break-word;
+          }
+        }
+        .field-dek {
+          color: rgb(127, 127, 127);
+          display: block;
+          float: left;
+          font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 19.2px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 2.07812px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          width: 298.812px;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family:'Acronym Extrabold';
+  src: image-url("fonts/Acronym-Extrabold-webfont.eot");
+  src: image-url("fonts/Acronym-Extrabold-webfont.eot?#iefix") format("embedded-opentype"),
+       image-url("fonts/Acronym-Extrabold-webfont.woff") format("woff"),
+       image-url("fonts/Acronym-Extrabold-webfont.ttf") format("truetype");
+}
