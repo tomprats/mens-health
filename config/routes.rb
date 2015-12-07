@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   resource :user, only: [:new, :create]
+  resources :assessments, only: [:create, :show, :update], param: :uid
+  get "assessments/:uid/results", to: "assessments#results", as: :assessment_results
 
   namespace :admin do
     root "users#index"

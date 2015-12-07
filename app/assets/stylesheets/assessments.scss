@@ -1,0 +1,40 @@
+@import "variables";
+
+body.assessments {
+  .tf-slide-deck-container .progress-bar .progress-bar-inner {
+    background-color: $red;
+  }
+
+  .type-badge {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 30px;
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .personality-types {
+    color: $white;
+    background-color: $red;
+    .personality-type {
+      display: inline-block;
+      width: 130px;
+      padding: 20px 0;
+      .pt-image {
+        margin: 10px;
+        padding: 20px;
+        background-color: $white;
+        border-radius: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      &.active, &:active, &:hover {
+        background-color: $blue;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+- color = @type.badge.color_1.match /(..)(..)(..)/
+.container-fluid.text-center
+  .row
+    .col-md-12
+      %h1 Your Gym Personality
+      .spacer-20
+      .type-badge(style="border-color: ##{@type.badge.color_1}; background-color: rgba(#{color[1].hex}, #{color[2].hex}, #{color[3].hex}, 0.067)")
+        = image_tag @type.badge.image_small
+      %h2= @type.name
+  .row
+    .col-md-8.col-md-offset-2.text-left
+      %p
+        = @type.description.split(". ")[0...4].join(". ") + "."
+        = link_to "Read More", "#type-description", class: "read-more"
+      %p.hidden#type-description= @type.description.split(". ")[4...-1].join(". ") + "."
+  .spacer-20
+  .row
+    .col-md-12.text-center
+      %h1 Personality Breakdown
+  .spacer-20
+.personality-types.text-center
+  - @results.personality_types.each_with_index do |personality, index|
+    - pt = personality.personality_type
+    .personality-type(data-ref="#pt-description-#{index}")
+      .pt-name= pt.name
+      .pt-image= image_tag pt.badge.image_small
+      .pt-score #{personality.score.to_i} / 100
+.container-fluid.text-center
+  - @results.personality_types.each_with_index do |personality, index|
+    .row.pt-description.hidden(id="pt-description-#{index}")
+      .col-md-8.col-md-offset-2
+        %h3.text-center= personality.personality_type.name
+        %p.text-left= personality.personality_type.description
+- if current_user && current_user.admin
+  .spacer-20
+  .container-fluid.text-center
+    .row
+      .col-md-8.col-md-offset-2
+        %h1 Marketing (Admin Only)
+        %p.text-left= @type.details.find { |detail| detail.title == "Application" }.try(:body)

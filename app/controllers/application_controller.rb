@@ -9,7 +9,23 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def current_assessment
+    @current_assessment ||= Assessment.find_by(uid: current_assessment_uids.last)
+  end
+  helper_method :current_assessment
+
+  def add_current_assessment(assessment)
+    @current_assessment = assessment
+    session[:current_assessment_uids] << assessment.uid
+  end
+  helper_method :add_current_assessment
+
   def not_found
     raise ActionController::RoutingError.new("Not Found")
+  end
+
+  private
+  def current_assessment_uids
+    session[:current_assessment_uids] ||= []
   end
 end

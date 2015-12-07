@@ -16,8 +16,8 @@
             - @assessments.each do |assessment|
               %tr
                 %td= assessment.uid
-                %td= assessment.blend_name || "Incomplete"
+                %td= assessment.type_name || "Incomplete"
                 %td= assessment.user ? assessment.user.name : "None"
                 %td= assessment.created_at.strftime("%m/%d/%y %I:%M %p")
                 %td
-                  = link_to "View", assessment_path(assessment)
+                  = link_to "View", assessment_path(assessment), target: :_blank

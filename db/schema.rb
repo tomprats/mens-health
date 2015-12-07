@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20151121064116) do
     t.integer  "user_id"
     t.string   "uid",                        null: false
     t.boolean  "finished",   default: false, null: false
-    t.string   "blend_name"
+    t.string   "type_name"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end

@@ -4,7 +4,7 @@ class CreateAssessments < ActiveRecord::Migration
       t.integer :user_id,                               index: true
       t.string :uid,                       null: false, index: true
       t.boolean :finished, default: false, null: false, index: true
-      t.string :blend_name
+      t.string :type_name
 
       t.timestamps                         null: false
     end

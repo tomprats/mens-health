@@ -1,0 +1,15 @@
+.container-fluid
+  .row
+    .col-md-12.text-center
+      %p Answer "Me" or "Not Me" to each slide with working out in mind
+      .assessment
+
+:javascript
+  Traitify.setPublicKey("#{ENV["TRAITIFY_PUBLIC"]}");
+  Traitify.setHost("#{ENV["TRAITIFY_HOST"]}");
+  Traitify.setVersion("v1");
+
+  widget = Traitify.ui.load("#{@assessment.uid}", ".assessment", { slideDeck: { showResults:false }});
+  widget.slideDeck.onFinished(function() {
+    location.replace("#{assessment_results_path(@assessment)}");
+  });
