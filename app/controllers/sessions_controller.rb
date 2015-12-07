@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     email = params[:user][:email].strip.downcase
     user = User.find_by(email: email)
     if user && user.authenticate(params[:user][:password])
-      session[:current_user_id] = user.id
+      set_current_user(user)
       redirect_to home_path
     else
       @user = User.new(email: email)
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:current_user_id] = nil
+    session.clear
     redirect_to home_path
   end
 end

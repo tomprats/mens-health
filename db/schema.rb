@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20151121064116) do
     t.string   "type_name"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.float    "type_score"
   end
 
   add_index "assessments", ["finished"], name: "index_assessments_on_finished", using: :btree

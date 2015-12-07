@@ -1,34 +1,37 @@
-.spacer-30
-.container-fluid
-  .row
-    .col-md-12.text-center
-      %h1
-        What's Your Gym
-        %br
-        Personality?
-      = link_to "Start", assessments_path, method: :post, class: "btn btn-red btn-lg"
+- if current_user || current_assessment
+  = render "pages/profile"
+- else
   .spacer-30
-  .row
-    .col-md-6.col-md-offset-3
-      .row
-        .col-sm-6
-          %hr
-        .col-sm-6
-          %hr
-        .absolute-center
-          or
-  .row#sign-in
-    .col-md-12.text-center
-      %h2 Sign In
-      %p To save your results
-  .row
-    .col-md-6.text-right
-      - class_name = controller_name == "users" ? " active" : ""
-      = link_to "New User", new_user_path(anchor: "sign-in"), class: "btn btn-red" + class_name
-    .col-md-6
-      - class_name = controller_name == "sessions" ? " active" : ""
-      = link_to "Returning", new_session_path(anchor: "sign-in"), class: "btn btn-red" + class_name
-  - if controller_name == "users"
-    = render "users/form"
-  - elsif controller_name == "sessions"
-    = render "sessions/form"
+  .container-fluid
+    .row
+      .col-md-12.text-center
+        %h1
+          What's Your Gym
+          %br
+          Personality?
+        = link_to "Start", assessments_path, method: :post, class: "btn btn-red btn-lg"
+    .spacer-30
+    .row
+      .col-md-6.col-md-offset-3
+        .row
+          .col-sm-6
+            %hr
+          .col-sm-6
+            %hr
+          .absolute-center
+            or
+    .row#sign-in
+      .col-md-12.text-center
+        %h2 Sign In
+        %p To save your results
+    .row
+      .col-md-6.text-right
+        - class_name = controller_name == "users" ? " active" : ""
+        = link_to "New User", new_user_path(anchor: "sign-in"), class: "btn btn-red" + class_name
+      .col-md-6
+        - class_name = controller_name == "sessions" ? " active" : ""
+        = link_to "Returning", new_session_path(anchor: "sign-in"), class: "btn btn-red" + class_name
+    - if controller_name == "users"
+      = render "users/form"
+    - elsif controller_name == "sessions"
+      = render "sessions/form"

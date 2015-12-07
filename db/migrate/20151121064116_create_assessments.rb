@@ -5,6 +5,7 @@ class CreateAssessments < ActiveRecord::Migration
       t.string :uid,                       null: false, index: true
       t.boolean :finished, default: false, null: false, index: true
       t.string :type_name
+      t.float :type_score
 
       t.timestamps                         null: false
     end

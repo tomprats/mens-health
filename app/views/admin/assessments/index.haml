@@ -20,4 +20,5 @@
                 %td= assessment.user ? assessment.user.name : "None"
                 %td= assessment.created_at.strftime("%m/%d/%y %I:%M %p")
                 %td
-                  = link_to "View", assessment_path(assessment), target: :_blank
+                  - if assessment.finished
+                    = link_to "View", assessment_path(assessment), target: :_blank

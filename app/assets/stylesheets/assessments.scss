@@ -1,20 +1,21 @@
 @import "variables";
 
+.type-badge {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 30px;
+  img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
 body.assessments {
   .tf-slide-deck-container .progress-bar .progress-bar-inner {
     background-color: $red;
   }
 
-  .type-badge {
-    display: inline-block;
-    border: 2px solid;
-    border-radius: 50%;
-    padding: 30px;
-    img {
-      height: 80px;
-      width: 80px;
-    }
-  }
   .personality-types {
     color: $white;
     background-color: $red;
