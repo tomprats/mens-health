@@ -7,7 +7,6 @@
         %table.table.table-bordered.table-hover
           %thead
             %tr
-              %th UID
               %th Personality
               %th User
               %th Created At
@@ -15,7 +14,6 @@
           %tbody
             - @assessments.each do |assessment|
               %tr
-                %td= assessment.uid
                 %td= assessment.type_name || "Incomplete"
                 %td= assessment.user ? assessment.user.name : "None"
                 %td= assessment.created_at.strftime("%m/%d/%y %I:%M %p")

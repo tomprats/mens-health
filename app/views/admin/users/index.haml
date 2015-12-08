@@ -14,7 +14,6 @@
         %table.table.table-bordered.table-hover
           %thead
             %tr
-              %th ID
               %th Email
               %th First Name
               %th Last Name
@@ -23,7 +22,6 @@
           %tbody
             - @admins.each do |admin|
               %tr
-                %td= admin.id
                 %td= admin.email
                 %td= admin.first_name
                 %td= admin.last_name
@@ -40,7 +38,6 @@
         %table.table.table-bordered.table-hover
           %thead
             %tr
-              %th ID
               %th Email
               %th First Name
               %th Last Name
@@ -49,7 +46,6 @@
           %tbody
             - @users.each do |user|
               %tr
-                %td= user.id
                 %td= user.email
                 %td= user.first_name
                 %td= user.last_name

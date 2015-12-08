@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     resources :users, only: [:index, :edit, :create, :update, :destroy]
     resources :assessments, only: [:index]
+    resources :analytics, only: [:index]
   end
 
   get :contact, to: "pages#contact"

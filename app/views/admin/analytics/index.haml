@@ -1,0 +1,27 @@
+.container-fluid
+  .row
+    .col-md-8.col-md-offset-2
+      .row
+        .col-sm-4
+          .panel.panel-default.panel-success
+            .panel-heading.text-center
+              %h4 Assessments
+            %ul.list-group
+              %li.list-group-item #{started = @assessments.count} Started
+              %li.list-group-item #{finished = @assessments.finished.count} Completed
+              %li.list-group-item #{100 * finished / started}% Completion Rate
+        .col-sm-4
+          .panel.panel-default.panel-info
+            .panel-heading.text-center
+              %h4 Personalities
+            %ul.list-group
+              - @personalities.each do |personality|
+                %li.list-group-item #{personality.total} #{personality.type_name}
+        .col-sm-4
+          .panel.panel-default.panel-warning
+            .panel-heading.text-center
+              %h4 Coming Soon
+            %ul.list-group
+              %li.list-group-item Top Traits
+              %li.list-group-item Total Shares
+              %li.list-group-item Engaging Graphs
