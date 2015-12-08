@@ -13,7 +13,7 @@ class Assessment < ActiveRecord::Base
   def results
     r = Rails.cache.fetch("assessment-#{uid}")
     unless r
-      r = Traitify.new.find_results(uid)
+      r = Traitify.new.assessment_with_results(uid, "linear", %w(traits types))
       Rails.cache.write("assessment-#{uid}", r)
     end
 

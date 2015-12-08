@@ -15,7 +15,14 @@
       %p.hidden#type-description= @type.description.split(". ")[4...-1].join(". ") + "."
   .spacer-20
   .row
-    .col-md-12.text-center
+    .col-md-12
+      = link_to "", class: "no-line", data: { toggle: :modal, target: ".demo-modal" } do
+        = fa_icon "twitter 2x"
+      = link_to "", class: "no-line", data: { toggle: :modal, target: ".demo-modal" } do
+        = fa_icon "facebook 2x"
+  .spacer-20
+  .row
+    .col-md-12
       %h1 Personality Breakdown
   .spacer-20
 .personality-types.text-center
@@ -31,6 +38,19 @@
       .col-md-8.col-md-offset-2
         %h3.text-center= personality.personality_type.name
         %p.text-left= personality.personality_type.description
+.container-fluid.text-center
+  .row
+    .col-md-8.col-md-offset-2
+      .spacer-20
+      %h1 Top Traits
+      .spacer-10
+      - @results.personality_traits.first(6).each do |personality|
+        - badge = personality.personality_trait.personality_type.badge
+        - color = badge.color_1.match /(..)(..)(..)/
+        .personality-trait.text-left(style="border-color: ##{badge.color_1}; background-color: rgba(#{color[1].hex}, #{color[2].hex}, #{color[3].hex}, 0.1)")
+          %h3= personality.personality_trait.name
+          %p.text-left= personality.personality_trait.definition
+          .pt-image= image_tag badge.image_small, width: 50, height: 50
 - if current_user && current_user.admin
   .spacer-20
   .container-fluid.text-center

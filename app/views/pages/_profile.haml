@@ -10,7 +10,12 @@
             .media-object.type-badge(style="border-color: ##{type.badge.color_1}; background-color: rgba(#{color[1].hex}, #{color[2].hex}, #{color[3].hex}, 0.067)")
               = image_tag type.badge.image_small
           .media-body
-            %h2.media-heading= type.name
+            %h2.media-heading
+              = type.name
+              = link_to "", class: "no-line", data: { toggle: :modal, target: ".demo-modal" } do
+                = fa_icon "twitter"
+              = link_to "", class: "no-line", data: { toggle: :modal, target: ".demo-modal" } do
+                = fa_icon "facebook"
             %p
               = type.description.split(". ")[0...4].join(". ") + "."
               = link_to "Read More", "#type-description", class: "read-more"
